@@ -2,8 +2,8 @@
 Template for Flutter apps, with development setups.
 
 ## Requirements
-- Docker 25.0.3
-- Docker Compose v2.24.6
+- Docker 27.3.1
+- Docker Compose v2.29.7
 
 ## Dependencies
 - Flutter
@@ -14,15 +14,20 @@ Template for Flutter apps, with development setups.
 $ docker compose up
 ```
 
-### Developing
-1. Install `Dev Container` VSCode extension, and "reopen in container". Docker container should be built beforehand.
-
-3. (optional) Flutter app can also be run from inside the `Dev Container`.
+2. Enter docker container, and start the Flutter app.
+- attaching the container to the terminal.
 ```bash
-$ make start
+$ docker compose exec app bash && make start
+```
+
+- connecting to the container using `Dev Container` (VSCode extension).
+  - connect to the container by "reopen in container"
+  - exit to the local directory by "reopen file locally"
+```bash
+$ (devcontainer) make start
 ```
 
 ## Resources
-- [online documentation](https://docs.flutter.dev/)
+- [Flutter documentation](https://docs.flutter.dev/)
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
