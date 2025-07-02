@@ -11,7 +11,7 @@ Template for Flutter apps, with development setups.
 ## Run on development mode
 1. Set up docker container, and enter container.
 ```bash
-$ docker compose up && docker compose exec app bash
+$ docker compose up -d && docker compose exec app bash
 ```
 
 2. Start the Flutter app.
